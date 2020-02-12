@@ -1,0 +1,21 @@
+{
+  "name": "@ignaciocalvo/peoplehr",
+  "version": "1.0.1",
+  "description": "Fills out time assignments in PeopleHR",
+  "main": "index.js",
+  "bin": "./index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Ignacio Calvo",
+  "license": "ISC",
+  "dependencies": {
+    "fs": "0.0.1-security",
+    "os": "^0.1.1",
+    "selenium-webdriver": "^4.0.0-alpha.5",
+    "url": "^0.11.0"
+  },
+  "devDependencies": {
+    "eslint": "^5.16.0"
+  }
+}
