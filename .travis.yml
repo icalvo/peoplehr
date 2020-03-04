@@ -1,1 +1,9 @@
 language: node_js
+deploy:
+  provider: npm
+  email: ignacio.calvo@gmail.com
+  api_key:
+    secure: BEeflUaXNUGwiRdtIOCo586HE6kN3BqseHEMXFeyHr1yUkHGdSQNauCzUbN1CL8TbGCqXUQ21eXFSLwXwG7Sf+CPlI9ViV1P9GV00tAudbmIMOX8HQWy1A+xPku3H2uoBNoaJd+l3FKkDB/ixN1mLCoFHWjxDZ6Bqgg+uuITds3f4T0kL/qFG7xY8PUCIfYba9/22i7RyZGvQ7fXfwVrBo0GOtw2NY7Glfhc/fwfcfflnJbD9MfyZa3Vg9gyHnX/BSthJ9WJXEApfUEbz6GhseYAUot/gJ5yIZ/UfJKZUCwCAzXQi3HL4xk7ByeW8787ZodRNF6v34x+2a+DKYF9I/hpS928s0bw7KnDbhAi8DM556hBCjgttyX3O7Z5rPKr3ipuHUh75JwS1mkueLMKT6WuSTdW3Gn/RbQLhNsG1fG0hS6Hvsj1lHvNpltnvoxERUPYV7/fzqkZMVZ5xlunIQ1QkOhLFvYhLF/wiHxZHT8ujyLHItfRWTh/ePtAYS5DzOJiAAs2mb/5/nvMFo5nQ7bwWmV3s9/Adlf4Oq7XhOhyBqykwumSILCQzkK7fR5VYN8PDtGP+C7ZlZtt6mEQf8JqzEc3/OMU5LgbmLedyR/WYkChWwW1lB5tzR4zRIi8SQNY6FgI1CHbS0pFc2ujEhvsollEUpeWnO+t4s+p88Q=
+  on:
+    tags: true
+    repo: icalvo/peoplehr

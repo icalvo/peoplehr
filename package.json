@@ -1,7 +1,10 @@
 {
   "name": "@ignaciocalvo/peoplehr",
-  "version": "1.0.1",
+  "version": "1.0.3",
   "description": "Fills out time assignments in PeopleHR",
+  "publishConfig": {
+    "access": "public"
+  },
   "main": "index.js",
   "bin": "./index.js",
   "repository": { 
