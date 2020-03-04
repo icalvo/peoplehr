@@ -4,8 +4,12 @@
   "description": "Fills out time assignments in PeopleHR",
   "main": "index.js",
   "bin": "./index.js",
+  "repository": { 
+    "type" : "git",
+    "url" : "https://github.com/icalvo/peoplehr.git"
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "exit 0"
   },
   "author": "Ignacio Calvo",
   "license": "ISC",

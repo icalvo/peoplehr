@@ -19,9 +19,7 @@ if (!fs.existsSync(configFile)) {
 
 const {email, password, peoplehr} = require(configFile);
 
-(async function example() {
-  const cliArgs = process.argv.slice(2);
-  const date = cliArgs.length === 0? new Date().toISOString().substr(0, 10): cliArgs[0];
+async function main(date) {
   console.log('Adding timesheet assignment for ' + date);
   const driver = await new Builder().forBrowser('firefox').build();
 
@@ -44,7 +42,6 @@ const {email, password, peoplehr} = require(configFile);
       }
     }
   }
-
   
   try {
     console.log('Authenticating...');
@@ -101,4 +98,8 @@ const {email, password, peoplehr} = require(configFile);
   } finally {
     await driver.quit();
   }
-})();
+}
+
+const cliArgs = process.argv.slice(2);
+const date = cliArgs.length === 0? new Date().toISOString().substr(0, 10): cliArgs[0];
+main(date);

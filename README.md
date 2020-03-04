@@ -16,7 +16,7 @@ You will need [Firefox](https://firefox.com/).
 npm install @ignaciocalvo/peoplehr -g
 ```
 
-Edit `~/.peoplehr/config.js` and fill your values there.
+Edit `~/.peoplehr/config.json` and fill your values there.
 
 ### Usage
 
