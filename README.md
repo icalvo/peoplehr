@@ -18,16 +18,25 @@ You will need [Firefox](https://firefox.com/).
 npm install @ignaciocalvo/peoplehr -g
 ```
 
-Edit `~/.peoplehr/config.json` and fill your values there.
+Create `~/.peoplehr/config.json` and fill your values there. The following is an example:
+
+```json
+{
+  "peoplehr": "https://business.peoplehr.net/",
+  "email": "your.email@business.com",
+  "password": "your.password"
+}
+```
+**Note for Windows users:** `~` folder is stored in the `%USERPROFILE%` environment variable and is typically similar to: `C:\Users\username`.
 
 ### Usage
 
-Fill the current date.
+Fill the current date:
 ```
 peoplehr
 ```
 
-Fill a specific date.
+Fill a specific date:
 ```
 peoplehr 2020-02-04
 ```
