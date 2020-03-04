@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.com/icalvo/peoplehr.svg?branch=master)](https://travis-ci.com/icalvo/peoplehr)
+
 # PeopleHR Time Assignment Filler
 
 This command line utility fills daily time assignments automatically.
