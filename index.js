@@ -55,6 +55,13 @@ async function main(date) {
 
     var plannerButton = await driver.wait(until.elementLocated(By.id('contentMain_ucEmployeeLink_hlnPlanner')), 50000);
     await retryClick(plannerButton);
+
+    const monthstartdate = date.substr(0, 8) + '01';
+    const monthElement = await driver.wait(until.elementLocated(By.css(".accordeon[data-monthstartdate='" + monthstartdate + "']")), 20000);
+    const monthClass = await monthElement.getAttribute('class');
+    if (monthClass.indexOf("active") === -1)
+      await retryClick(monthElement);
+
     var dateElement = await driver.wait(until.elementLocated(By.css(".sgreen [data-date='" + date + "']")), 20000);
     await driver.wait(until.elementIsVisible(dateElement), 5000);
     var btnClass = await dateElement.getAttribute('class');
