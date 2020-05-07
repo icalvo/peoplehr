@@ -19,7 +19,7 @@ if (!fs.existsSync(configFile)) {
 
 const {email, password, peoplehr} = require(configFile);
 
-async function main(date) {
+async function registerDate(date) {
   console.log('Adding timesheet assignment for ' + date);
   const driver = await new Builder().forBrowser('firefox').build();
 
@@ -108,5 +108,13 @@ async function main(date) {
 }
 
 const cliArgs = process.argv.slice(2);
-const date = cliArgs.length === 0? new Date().toISOString().substr(0, 10): cliArgs[0];
-main(date);
+const startdate = new Date(cliArgs.length === 0? new Date(): cliArgs[0]);
+const enddate = new Date(cliArgs.length <= 1? startdate: cliArgs[1]);
+date = startdate;
+do  {
+  if (date.getDay() !== 0 && date.getDay() !== 6)
+    registerDate(date.toISOString().substr(0, 10));
+  date.setDate(date.getDate() + 1);
+} while (date <= enddate)
+
+
